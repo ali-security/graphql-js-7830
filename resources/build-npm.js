@@ -123,8 +123,10 @@ function buildPackageJSON() {
     const splittedTag = preReleaseTag.split('.');
     // Note: `experimental-*` take precedence over `alpha`, `beta` or `rc`.
     const versionTag = splittedTag[2] ?? splittedTag[0];
+    console.log("Tag   "+versionTag)
+    console.log(['alpha', 'beta', 'rc', 'sp1'].includes(versionTag))
     assert(
-      ['alpha', 'beta', 'rc'].includes(versionTag) ||
+      ['alpha', 'beta', 'rc', 'sp1'].includes(versionTag) ||
         versionTag.startsWith('experimental-'),
       `"${versionTag}" tag is not supported.`,
     );

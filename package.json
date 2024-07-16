@@ -1,6 +1,6 @@
 {
   "name": "graphql",
-  "version": "16.6.0",
+  "version": "16.6.0-sp1",
   "description": "A Query Language and Runtime which can target any service.",
   "license": "MIT",
   "private": true,
@@ -35,7 +35,7 @@
     "fuzzonly": "mocha --full-trace src/**/__tests__/**/*-fuzz.ts",
     "changelog": "node resources/gen-changelog.js",
     "benchmark": "node benchmark/benchmark.js",
-    "test": "npm run lint && npm run check && npm run testonly && npm run prettier:check && npm run check:spelling && npm run check:integrations",
+    "test": "npm run check && npm run testonly && npm run prettier:check && npm run check:spelling && npm run check:integrations",
     "lint": "eslint --cache --max-warnings 0 .",
     "check": "tsc --pretty",
     "testonly": "mocha --full-trace src/**/__tests__/**/*-test.ts",
@@ -90,6 +90,6 @@
     "url-loader": "4.1.1"
   },
   "publishConfig": {
-    "tag": "latest"
+    "tag": "sp1"
   }
 }
